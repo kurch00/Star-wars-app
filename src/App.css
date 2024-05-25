@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: StarJedi;
+  src: url('../public/Starjedi.ttf') format('truetype');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+    background-image: url('./img/starwarsbg.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-repeat: repeat-y; /* Repete a imagem no eixo Y */
+    background-attachment: fixed; /* Fixa o background para criar o efeito parallax */
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header{
+  display: flex;
+  justify-content: space-between;
+  
+  align-items: center;
+}
+
+header span {
+  font-family: 'StarJedi', sans-serif;
+  font-size: 30px;
+}
+
+header .menu{
+  display: flex;
+  padding-top: 10px;
+}
+
+header .menu ul{
+  display: flex;
+  gap: 100px;
+  list-style-type: none;
+  align-items: center;
+}
+
+header .menu ul li{
+  display: flex;
+  gap: 5px;
+}
+
+header .menu ul li a {
+  text-decoration: none;
+  color: white;
+  position: relative; /* Necessário para posicionar o pseudoelemento */
+  font-family: 'StarJedi', sans-serif;
+  line-height: 0;
+} 
+
+.sabre-luz{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-right: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.sabre {
+  position: relative; /* Cria um contexto de empilhamento */
+  display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sabre img {
+  display: block;
+  height: 50px;
+  width: 50px;
+  transform: rotate(90deg);
+  z-index: 1; /* Certifique-se de que a imagem esteja acima */
+  position: relative; /* Adiciona contexto de empilhamento ao próprio elemento */
+}
+
+.plasma {
+  position: absolute;
+  border-radius: 12px 12px 0 0;
+  height: 4px;
+  left: 30px;
+  bottom: 22px;
+  width: 0;
+  z-index: 0; /* Certifique-se de que o plasma esteja abaixo */
+  transition: .5s linear width;
+}
+
+.sabre img:hover ~ .plasma {
+  width: 75%;
+  background: red;
+  box-shadow: 2px 2px 20px red;
+}
+
+header .menu ul li a .perfil{
+  background-image: url('./img/charmander.png');
+  border-radius: 50%;
+  width: 50px;
+  height: 45px;
+  transition: .2s linear;
+}
+
+header .menu ul li .perfil:hover{
+  transform: scale(1.1);
 }
