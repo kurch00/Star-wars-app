@@ -8,7 +8,7 @@ function Header() {
         <header>
             <span class="txt">STAR WARS</span>
             <div class="menu">
-                <ul>
+                <ul class="">
                     <li>
                         <FontAwesomeIcon icon={faHouse}/>
                         <div class="sabre-luz">
@@ -30,9 +30,11 @@ function Header() {
                             </div>
                         </div>
                     </li>
+                </ul>
+                <ul>
                     
                     <li>
-                         <FontAwesomeIcon icon={faStar}/>
+                        <FontAwesomeIcon icon={faStar}/>
                         <div class="sabre-luz">
                             <a href="#" class="menu-item-txt">Favoritos (0)</a>
                             <div class="sabre">
@@ -45,6 +47,7 @@ function Header() {
                         <a href="#"><img src={Perfil} alt="perfil" class="perfil" /></a>
                     </li>
                 </ul>
+                
             </div>
         </header>
     );

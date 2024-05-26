@@ -25,18 +25,18 @@ body{
 header{
   display: flex;
   justify-content: space-between;
-  
   align-items: center;
 }
 
 header span {
   font-family: 'StarJedi', sans-serif;
   font-size: 30px;
+  display: flex;
 }
 
 header .menu{
   display: flex;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 header .menu ul{
@@ -57,6 +57,7 @@ header .menu ul li a {
   position: relative; /* Necessário para posicionar o pseudoelemento */
   font-family: 'StarJedi', sans-serif;
   line-height: 0;
+  margin-left: 10px;
 } 
 
 .sabre-luz{
