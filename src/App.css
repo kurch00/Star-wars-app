@@ -219,3 +219,87 @@ header .menu ul li .link-perfil{
   position: relative;
   z-index: 1;
 }
+
+
+
+
+
+
+
+
+.main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.main .cards-main{
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main .main h1{
+  font-family: 'StarJedi', sans-serif;
+  font-size: 30px;
+}
+
+.main .cards-main .card{
+  border: 1.5px solid white;
+  width: 30%;
+  height: 100%;
+  padding-bottom: 20px;
+  border-radius: 5px;
+}
+
+.main .cards-main .card .cima-card{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  
+}
+
+.main .cards-main .card .cima-card button{
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.main .cards-main .card .meio-card img{
+  width: 200px;
+  height: 200px;
+}
+
+.main .cards-main .card .baixo-card{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  padding-left: 45px;
+}
+
+.main .cards-main .card .baixo-card h2{
+  font-size: 24px;
+  padding-top: 15px;
+}
+
+.main .cards-main .card .baixo-card span{
+  font-size: 15px;
+}
+
+.main .cards-main .card .baixo-card button{
+  background: none;
+  border: 1.5px rgb(255, 244, 142) solid;
+  color: white;
+  padding: 10px;
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
