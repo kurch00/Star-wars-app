@@ -3,6 +3,11 @@
   src: url('../public/Starjedi.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: Starjhol;
+  src: url('../public/Starjhol.ttf') format('truetype');
+}
+
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
 
 *{
@@ -26,8 +31,10 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 5%;
+  width: 100%;
 }
-
+ 
 header span {
   font-family: 'StarJedi', sans-serif;
   font-size: 30px;
@@ -44,11 +51,13 @@ header .menu ul{
   gap: 100px;
   list-style-type: none;
   align-items: center;
+  margin-top: revert;
 }
 
 header .menu ul li{
   display: flex;
   gap: 5px;
+  align-items: baseline;
 }
 
 header .menu ul li a {
@@ -64,28 +73,31 @@ header .menu ul li a {
   display: flex;
   flex-direction: column;
   padding-right: 20px;
+  gap: 10px;
 }
 
 .sabre {
   position: relative; /* Cria um contexto de empilhamento */
   display: inline-block;
+  height: 50px;
 }
 
 .sabre img {
   display: block;
-  height: 50px;
-  width: 50px;
+  height: 20px;
+  width: 10px;
   transform: rotate(90deg);
   z-index: 1; /* Certifique-se de que a imagem esteja acima */
   position: relative; /* Adiciona contexto de empilhamento ao próprio elemento */
+  margin-left: 14px;
 }
 
 .plasma {
   position: absolute;
   border-radius: 12px 12px 0 0;
   height: 4px;
-  left: 30px;
-  bottom: 22px;
+  left: 25px;
+  bottom: 37px;
   width: 0;
   z-index: 0; /* Certifique-se de que o plasma esteja abaixo */
   transition: .5s linear width;
@@ -98,7 +110,7 @@ header .menu ul li a {
 }
 
 header .menu ul li a .perfil{
-  background-image: url('./img/charmander.png');
+  background-image: url('./img/background.png');
   border-radius: 50%;
   width: 50px;
   height: 45px;
@@ -107,4 +119,103 @@ header .menu ul li a .perfil{
 
 header .menu ul li .perfil:hover{
   transform: scale(1.1);
+}
+
+header .menu ul li .link-perfil{
+  margin-bottom: 25px;
+}
+
+
+
+
+.parte-central{
+  display: flex;
+}
+
+
+
+
+
+
+.esquerda{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10% 5%;
+}
+
+.esquerda .esquerda-cima{
+  border: 1px solid rgb(255, 244, 142);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 5px;
+}
+
+.esquerda .esquerda-cima h1{
+  font-size: 20px;
+  color: rgb(255, 244, 142);
+  font-family: 'Starjhol', sans-serif;
+}
+
+.esquerda .esquerda-cima form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.esquerda .esquerda-cima form input{
+  display: flex;
+  padding: 10px;
+  background: none;
+  border: white solid 1px;
+  border-radius: 5px;
+}
+
+/*.esquerda .esquerda-cima form button{
+  padding: 10px;
+  width: 40%;
+  background: none;
+  border: 2px solid rgb(255, 244, 142);
+  border-radius: 5px;
+  color: rgb(255, 244, 142);
+  cursor: pointer;
+}*/
+
+.btn-hover {
+  position: relative;
+  width: 40%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: transparent;
+  border: 2px solid rgb(255, 244, 142);
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease;
+}
+
+.btn-hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 244, 142);
+  z-index: 0;
+  transition: transform 0.4s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.btn-hover:hover::before {
+  transform: scaleX(1);
+}
+
+.btn-hover span {
+  color: rgb(255, 0, 0);
+  position: relative;
+  z-index: 1;
 }

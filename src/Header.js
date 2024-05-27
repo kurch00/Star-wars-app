@@ -1,12 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Perfil from './img/charmander.png'
+import Perfil from './img/background.png'
 import Sabre from './img/sabreluz.png'
 import { faCoffee, faHouse, faStar, faUser } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
     return(
         <header>
-            <span class="txt">STAR WARS</span>
+            <div class="titulo-header">
+                <span class="txt">STAR WARS</span>
+            </div>
             <div class="menu">
                 <ul class="">
                     <li>
@@ -30,9 +32,6 @@ function Header() {
                             </div>
                         </div>
                     </li>
-                </ul>
-                <ul>
-                    
                     <li>
                         <FontAwesomeIcon icon={faStar}/>
                         <div class="sabre-luz">
@@ -44,8 +43,13 @@ function Header() {
                         </div>
                     </li>
                     <li>
-                        <a href="#"><img src={Perfil} alt="perfil" class="perfil" /></a>
+                        <a href="#" class="link-perfil"><img src={Perfil} alt="perfil" class="perfil" /></a>
                     </li>
+                </ul>
+                <ul>
+                    
+                    
+                   
                 </ul>
                 
             </div>
